@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BlueShield Password Generator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🔐 BlueShield Password Generator</h1>
+</header>
+
+<div class="container">
+
+    <div class="card">
+
+        <input type="text" id="password" readonly>
+
+        <button onclick="copyPassword()">📋 Copiar</button>
+
+        <div class="options">
+            <label>Tamanho:
+                <input type="range" id="length" min="8" max="50" value="16">
+                <span id="lengthValue">16</span>
+            </label>
+
+            <label><input type="checkbox" id="uppercase" checked> Maiúsculas</label>
+            <label><input type="checkbox" id="lowercase" checked> Minúsculas</label>
+            <label><input type="checkbox" id="numbers" checked> Números</label>
+            <label><input type="checkbox" id="symbols" checked> Especiais</label>
+        </div>
+
+        <button class="generate" onclick="generatePassword()">
+            Gerar Senha
+        </button>
+
+        <div class="strength">
+            <div id="bar"></div>
+        </div>
+
+        <p id="strengthText"></p>
+
+        <h3>Últimas Senhas</h3>
+        <ul id="history"></ul>
+
+    </div>
+
+</div>
+
+<footer>
+    Desenvolvido seguindo boas práticas de segurança digital.
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
